@@ -1,6 +1,14 @@
+const validation = require('./helpers/inputValidator')
 
-const add = () => {
+const add = (a,b) => {
 
+    const areInputsValid = validation(a,b)
+
+    if(areInputsValid) {
+        return a + b;
+    }else {
+        return "invalid input"
+    }
 }
 
 const subtract = () => {
